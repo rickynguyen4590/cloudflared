@@ -1,8 +1,8 @@
 # 
 [![build status](https://github.com/rickynguyen4590/cloudflared/actions/workflows/main.yaml/badge.svg)](https://github.com/rickynguyen4590/cloudflared/actions/workflows/main.yaml)
 
-[![docker image size](https://img.shields.io/docker/image-size/rickynguyen4/cloudflared/latest)](https://hub.docker.com/r/rickynguyen4590/cloudflared)
-[![docker pulls](https://img.shields.io/docker/pulls/rickynguyen4590/cloudflared.svg)](https://hub.docker.com/r/rickynguyen4590/cloudflared/)
+[![docker image size](https://img.shields.io/docker/image-size/rickynguyen/cloudflared/latest)](https://hub.docker.com/r/rickynguyen4590/cloudflared)
+[![docker pulls](https://img.shields.io/docker/pulls/rickynguyen/cloudflared.svg)](https://hub.docker.com/r/rickynguyen4/cloudflared/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Argo Tunnel client

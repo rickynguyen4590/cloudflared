@@ -30,7 +30,8 @@ RUN adduser -S cloudflared; \
     rm -rf /var/cache/apk/*;
 
 COPY --from=gobuild /tmp/release/cmd/cloudflared/cloudflared /usr/local/bin/cloudflared
+COPY ./entrypoint.sh /entrypoint.sh
 
 USER cloudflared
 
-CMD ["/bin/sh", "-c", "/usr/local/bin/cloudflared ${CLOUDFLARED_OPTS}"]
+ENTRYPOINT ["/entrypoint.sh"]

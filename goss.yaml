@@ -1,0 +1,10 @@
+package:
+  ca-certificates:
+    installed: true
+
+command:
+  uname -a:
+    exit-status: 0
+
+  cloudflared --version:
+    exit-status: 0

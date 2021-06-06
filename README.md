@@ -9,7 +9,24 @@
 
 Contains the command-line client for Argo Tunnel, a tunneling daemon that proxies any local webserver through the Cloudflare network. Extensive documentation can be found in the [Argo Tunnel section](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps) of the Cloudflare Docs.
 
-## Installing `cloudflared`
+## Using with Github action service
+Support to access TCP tunnel created by cloudflare such as access private minikube.
+```yml:
+services:
+    cloudflared:
+    image: rickynguyen/cloudflared
+    env:
+        CLOUDFLARED_OPTS: access tcp --hostname ${{ secrets.CLOUDFLARE_K8S_HOSTNAME }} --listener 0.0.0.0:16443
+    ports:
+        - 16443:16443
+steps:
+    - uses: actions-hub/kubectl@master
+      env:
+        KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+      with:
+        args: get pods
+
+```
 ## License
 
 Distributed under the MIT license
